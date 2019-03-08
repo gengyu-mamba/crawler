@@ -46,11 +46,79 @@ Response对象的常用属性如下：
 -------- | -----
 response.url  | 返回请求网站的URL
 response.status_code  | 返回响应状态码
-response.encoding  | 返回响应的编码方式
-response.content  | 以二进制形式返回响应
 response.text   | 以字符串形式返回响应
+response.content  | 以二进制形式返回响应
+response.encoding  | 返回响应的编码方式
 
-首先是response.url，代码如下：
+首先是response.url，示例如下：
+```python
+import requests 
+
+res_url = requests.get('https://www.csdn.net/')
+print(res_url.url)
+```
+执行结果：
+```python
+https://www.csdn.net/
+```
+显而易见，res_url是用来返回请求的网站地址。
+
+接下来的属性是response.status_code，它能够返回请求的响应状态码，示例如下：
+```python
+import requests 
+
+res_url = requests.get('https://www.csdn.net/')
+print(res_url.status_code)
+```
+执行结果：
+```python
+200
+```
+
+响应状态码200代表服务器同意了我们的请求，并返回了数据给我们。当然，除了200，还有其他响应状态码，下面我列出了常用的一些响应状态码：
+
+#### 常用响应状态吗
+响应状态吗     |说明    | 示例  |   说明
+-------- | -------- | -------- | -------- 
+1xx  | 信息性状态码    | 100    | 继续提出请求
+2xx  | 成功状态码      | 200    | 请求成功
+3xx  | 重定向状态码    | 305    | 应使用代理访问
+4xx  | 客户端错误状态码| 404    | 所请求的页面不存在或已被删除
+5xx  | 服务端错误状态码| 503    | 服务不可用
+
+接下来的属性是response.text，它能够以字符串形式返回响应内容，适用于文字、网页源代码的下载。示例如下：
+```python
+import requests 
+
+res_url = requests.get('https://www.csdn.net/robots.txt')
+print(res_url.text)
+```
+执行结果：
+```python
+User-agent: *
+Disallow: /scripts
+Disallow: /public
+Disallow: /css/
+Disallow: /images/
+Disallow: /content/
+Disallow: /ui/
+Disallow: /js/
+Disallow: /scripts/
+Disallow: /article_preview.html*
+Disallow: /tag/
+Disallow: /*?*
+
+Sitemap: http://www.csdn.net/article/sitemap.txt
+```
+通过response.text方法，我们可以获取我们想要的内容，将其打印或者存储起来。
+
+接下来的属性是response.content，它能够以二进制形式返回响应内容，适用于图片、音频、视频的下载。示例如下：
+
+
+
+
+
+
 
 
 
