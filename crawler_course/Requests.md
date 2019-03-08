@@ -48,7 +48,7 @@ response.url  | 返回请求网站的URL
 response.status_code  | 返回响应状态码
 response.text   | 以字符串形式返回响应
 response.content  | 以二进制形式返回响应
-response.encoding  | 返回响应的编码方式
+response.encoding  | 设置响应的编码方式
 
 首先是response.url，示例如下：
 ```python
@@ -112,7 +112,44 @@ Sitemap: http://www.csdn.net/article/sitemap.txt
 ```
 通过response.text方法，我们可以获取我们想要的内容，将其打印或者存储起来。
 
-接下来的属性是response.content，它能够以二进制形式返回响应内容，适用于图片、音频、视频的下载。示例如下：
+接下来的属性是response.content，它能够以二进制形式返回响应内容，适用于图片、音频、视频的下载。如果我们想下载一张图片，它的URL是：https://goss3.vcg.com/creative/vcg/800/version23/VCG41549445817.jpg
+![person](https://goss3.vcg.com/creative/vcg/800/version23/VCG41549445817.jpg)
+
+示例如下：
+```python
+import requests
+
+res_url = requests.get('https://goss3.vcg.com/creative/vcg/800/version23/VCG41549445817.jpg')
+img = res_url.content
+image = open('person.jpg','wb')
+image.write(img)
+image.close()
+```
+
+这样，我们需要的图片就下载到本地了。
+
+最后一个属性是response.encoding，它能够设置响应的编码方式。示例如下:
+```python
+import requests 
+
+res_url = requests.get('https://edu.csdn.net/notebook/python/week01/1.html')
+res_url.encoding = 'gbk'
+print(res_url.text)
+```
+
+执行后，发现网站内容出现一堆乱码，这是怎么回事呢？
+
+原来，这个网站的数据类型是UTF-8，当我们设置编码格式为GBK后，造成其与本身的UTF-8编码不一致，所以打印出来一堆乱码。
+
+在现实情况中，我们应当在何时使用response.encoding呢？
+首先，目标数据本身是什么编码是未知的。用requests.get()发送请求后，我们会取得一个Response对象，其中，requests库会对数据的编码类型做出自己的判断。但是！这个判断有可能准确，也可能不准确。
+
+如果它判断准确的话，我们打印出来的response.text的内容就是正常的、没有乱码的，那就用不到res.encoding；如果判断不准确，就会出现一堆乱码，那我们就可以去查看目标数据的编码，然后再用res.encoding把编码定义成和目标数据一致的类型即可。
+
+好了，到这里，Requests.get()和Response的属性就讲完了。
+
+
+
 
 
 
