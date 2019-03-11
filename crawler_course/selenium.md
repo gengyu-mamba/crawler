@@ -105,3 +105,47 @@ driver.close()是关闭浏览器驱动，每次调用了webdriver之后，都要
 
 就像是，每次打开冰箱门，把东西放进去之后，都要记得关上门，使用selenium调用了浏览器之后也要记得关闭浏览器。
 
+## 解析与提取数据
+我们在前面花之前的章节学习了使用BeautifulSoup解析网页源代码，然后提取其中的数据。
+
+selenium库同样也具备解析数据、提取数据的能力。它和BeautifulSoup的底层原理一致，但在一些细节和语法上有所出入。
+
+首先明显的一个不同即是：selenium所解析提取的，是Elements中的所有数据，而BeautifulSoup所解析的则只是Network中第0个请求的响应。
+
+本章节开头我说过，用selenium把网页打开，所有信息就都加载到了Elements那里，之后，就可以把动态网页用静态网页的方法爬取了。
+
+selenium是如何解析与提取数据的呢？我们现在来试试提取【你好蜘蛛侠！】网页中，<label>元素的内容吧。
+
+#### Selenium提取数据的方法
+方法     |作用    
+-------- | --------
+find_element_by_tag_name | 通过元素的标签名称选择
+find_element_by_class_name | 通过元素的class属性选择
+find_element_by_id | 通过元素的id选择
+find_element_by_name | 通过元素的name属性选择
+find_element_by_link_text | 通过链接文本获取超链接
+find_element_by_partial_link_text | 通过链接的部分文本获取超链接
+
+#### WebElement与Tag的用法对比
+WebElement     | Tag | 作用    
+-------- | -------- | --------
+WebElement.text | 提取Tag中的Tag | 提取文字
+WebElement.get_attribute() | Tag[] | 输入参数：属性名，可以提取属性值
+
+#### Selenium提取多个数据的方法
+方法     |作用    
+-------- | --------
+find_elements_by_tag_name | 通过元素的标签名称选择
+find_elements_by_class_name | 通过元素的class属性选择
+find_elements_by_id | 通过元素的id选择
+find_elements_by_name | 通过元素的name属性选择
+find_elements_by_link_text | 通过链接文本获取超链接
+find_elements_by_partial_link_text | 通过链接的部分文本获取超链接
+
+#### Selenium操作元素的常用方法
+方法     |作用    
+-------- | --------
+.clear() | 清楚元素的内容
+.send_keys() | 模拟按键输入，自动填写表单
+.click() | 点击元素
+
