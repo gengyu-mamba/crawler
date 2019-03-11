@@ -81,7 +81,7 @@ find_all()| 提取满足要求的所有数据 | BeautifulSoup<br>对象find_all(
 
 #### Tag对象的三种常用属性与方法
 属性/方法     |作用    
--------- | -------- | -------- | -------- 
+-------- | --------
 Tag.find()和Tag.find_all() | 提取Tag中的Tag
 Tag.text | 提取Tag中的文字
 Tag['属性名'] | 输入参数:属性名,可以提取Tag中这个属性的值
