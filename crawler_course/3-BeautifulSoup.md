@@ -77,5 +77,16 @@ find()与find_all()是BeautifulSoup对象的两个方法，它们可以匹配htm
 find()    | 提取满足要求的首个数据 | BeautifulSoup<br>对象find(标签，属性)    | soup.find('div',class_='books')
 find_all()| 提取满足要求的所有数据 | BeautifulSoup<br>对象find_all(标签，属性)    | soup.find_all('div',class_='books')
 
+下一步，就是看看Tag类对象的常用属性和方法了。
+
+#### Tag对象的三种常用属性与方法
+属性/方法     |作用    
+-------- | -------- | -------- | -------- 
+Tag.find()和Tag.find_all() | 提取Tag中的Tag
+Tag.text | 提取Tag中的文字
+Tag['属性名'] | 输入参数:属性名,可以提取Tag中这个属性的值
+
+
+
 
 
