@@ -31,6 +31,6 @@ file.close()
 ```
 
 将我们刚刚写入的csv文件下载到本地电脑，再用记事本打开，你会看到：
-
+![csv](https://github.com/gengyu-mamba/python-crawler/blob/master/resource/csv.png)
 
 
