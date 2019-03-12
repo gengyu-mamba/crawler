@@ -34,6 +34,7 @@ file.close()
 ![csv](https://github.com/gengyu-mamba/python-crawler/blob/master/resource/csv.png)
 
 用Excel打开，则是这样的：
+
 ![excel](https://github.com/gengyu-mamba/python-crawler/blob/master/resource/excel.png)
 
 发现了吗？csv文件里的逗号可以充当分隔同列字符串的作用。
