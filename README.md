@@ -1,44 +1,24 @@
-课程名称：python爬虫开发入门
+learn python crawler
 
-姓名/头衔：耿宇/PC开发工程师
+1、[导读 爬虫介绍](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/1-%E5%AF%BC%E8%AF%BB%20%E7%88%AC%E8%99%AB%E4%BB%8B%E7%BB%8D.md)
 
-联系方式：gengyu_robot
+2、[Requests](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/2-Requests.md)
 
-作者简介：
+3、[BeautifulSoup](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/3-BeautifulSoup.md)
 
-读者定位：
+4、[Json](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/4-Json.md)
 
-拥有python基础、HTML基础
+5、[带参数请求数据](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/5-%E5%B8%A6%E5%8F%82%E6%95%B0%E8%AF%B7%E6%B1%82%E6%95%B0%E6%8D%AE.md)
 
-网络爬虫技术爱好者
+6、[Csv&Excel](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/6-Csv%26Excel.md)
 
-希望快速学习 Python爬虫，掌握要义，付诸实践的开发者
+7、[cookies](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/7-cookies.md)
 
-有志于转型网络爬虫，数据挖掘的开发者
+8、[浏览器自动化与仿真(selenium)](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/8-selenium.md)
 
-课程简介：
+9、[定时与邮件](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/9-%E5%AE%9A%E6%97%B6%E4%B8%8E%E9%82%AE%E4%BB%B6.md)
 
-课程大纲：
-
-1、导读 爬虫介绍
-
-2、Requests
-
-3、BeautifulSoup
-
-4、Json
-
-5、带参数请求数据
-
-6、Csv&Excel
-
-7、cookies
-
-8、浏览器自动化与仿真(selenium)
-
-9、定时与邮件
-
-10、协程
+10、[协程](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/10-%E5%8D%8F%E7%A8%8B.md)
 
 11、Scrapy框架
 
