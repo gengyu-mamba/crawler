@@ -1,4 +1,4 @@
-# learn python crawler
+# learn crawler
 
 1、[导读 爬虫介绍](https://github.com/gengyu-mamba/python-crawler/blob/master/crawler_course/1-%E5%AF%BC%E8%AF%BB%20%E7%88%AC%E8%99%AB%E4%BB%8B%E7%BB%8D.md)
 
